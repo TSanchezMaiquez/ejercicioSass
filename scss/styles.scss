@@ -1,0 +1,79 @@
+@use 'variables';
+@import 'funciones';
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    @include reset-margin-padding;
+}
+
+main {
+    @include reset-margin-padding;
+    overflow: hidden; 
+    background: url('../1.jpg') no-repeat center center scroll;
+    background-size: cover; 
+    
+}
+h1 {
+   @extend %h1;
+   
+}
+.column {
+    float: left;
+    margin-top: 20px;
+    width: 18% ;
+    background-color: rgba(189, 224, 253, 0.4);
+    margin-left: 22px;
+    border-radius: variables.$border-radius;
+}
+.card {
+    background-color: variables.$color-blanco;
+    border-radius: variables.$border-radius;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    margin: 15px;
+}
+h2{
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+h3{
+    margin: 0;
+    margin-top: 10px;
+}
+i{
+    display: inline;
+}
+
+.tags .tag {
+    display: inline-block; 
+    margin-right: 5px; 
+}
+.cierre{
+   @extend %simbolo-de-cierre;
+}
+.front, .back, .device{
+    
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+}
+.front {
+    background-color: rgb(56, 216, 56);
+}
+
+.back {
+    background-color: rgb(228, 129, 84);
+}
+.device{
+    background-color: rgb(253, 231, 134);
+}
+.card:hover {
+    background-color: rgb(148, 188, 223);
+    cursor: pointer;
+
+}
